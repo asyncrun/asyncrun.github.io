@@ -1,52 +1,29 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: http://mazhuang.org/jekyll-theme-solid
-date_format: "ordinal"
-title: LeviNotes
-author: Levi
+# Jekyll configuration
 
-# ---------------- #
-#   RSS / Email    #
-# ---------------- #
-subscribe_rss: /feed.xml
-email:
+name: Levi'notes
+description: Welcome!
 
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
+# url is currently only used only for the RSS feed in feed.xml
+url: https://github.com/asyncrun
+
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: '/jekyll-xixia'
+## default date_format
+date_format:
+  title: "%B-%-d-%Y"
+  archive: "%b"
+  categories: "%b-%Y"
+  tag: "%b-%Y"
+# Language
+lan: "en"
+
+paginate: 10
+
+highlighter: rouge
 markdown: kramdown
-kramdown:
-    input: GFM
-paginate: 9
-permalink: /:year/:month/:day/:title/
-gems:
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+gems: ['jekyll-paginate']
 
-# ---------------- #
-#      Comments    #
-# ---------------- #
-# support provider: disqus, gitment
-comments_provider: gitment
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://disqus.com
-disqus:
-    username: mzlogin
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: mzlogin
-    repo: jekyll-theme-solid
-    oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+exclude: ['README.md', 'LICENSE', "*.bak"]
