@@ -1,44 +1,26 @@
-# This is the default format.
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:title.html
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-safe: true
-lsi: false
-markdown: kramdown
-excerpt_separator: "\n\n"
-encoding: UTF-8
-ASSET_PATH: assets
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
 
-kramdown:
-    input: GFM
-    auto_ids: true
-    footnote_nr: 1
-    entity_output: as_char
-    toc_levels: 1..6
-    syntax_highlighter: rouge
-    syntax_highlighter_opts:
-        default_lang: plaintext
+# Setup
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
+baseurl:          /
 
-title : Levi技术笔记
-author :
-    name : Levi
-    email : asyncrun@gmail.com
-    github : https://github.com/asyncrun/
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
 
-image_dir: http://qiniucdn.zhaoxiaodan.com
-production_url : http://www.zhaoxiaodan.com
+paginate:         5
 
+# Custom vars
+version:          2.1.0
 
-######## for 3-Jekyll themes
-# Sidebar filter
-# Choose 'tag' or 'category' as filter in sidebar.
-filter: 'category'
-
-sass:
-    style: compressed
-
-######## for 3-Jekyll  end themes
-
-disqus :
-    short_name : pangliang
+github:
+  repo:           https://github.com/poole/hyde
