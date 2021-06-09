@@ -20,12 +20,11 @@ kramdown:
     syntax_highlighter_opts:
         default_lang: plaintext
 
-title : 胖梁的技术笔记
+title : Levi技术笔记
 author :
-    name : 胖梁
-    email : liang8305@gmail.com
-    github : https://github.com/pangliang
-    weibo : http://weibo.com/iamliangwei
+    name : Levi
+    email : asyncrun@gmail.com
+    github : https://github.com/asyncrun/
 
 image_dir: http://qiniucdn.zhaoxiaodan.com
 production_url : http://www.zhaoxiaodan.com
