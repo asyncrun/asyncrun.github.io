@@ -1,114 +1,45 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: http://asyncrun.tech
-date_format: "ordinal"
-title: Levi'notes
-subtitle: "读书 | 学习 | 工作"
-description: "Levi的笔记"
-keywords: 笔记
-timezone: Asia/HangZhou
-encoding: "utf-8"
-side_bar_repo_limit: 5
+# This is the default format.
+# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink: /:categories/:title.html
 
-# ---------------- #
-#      Author      #
-# ---------------- #
-author: Levi
-organization: asyncrun.com
-organization_url: http://www.zkh360.com
-github_username: asyncrun
-location: HangZhou, China
-email: asyncrun@gmail.com
-
-# ---------------- #
-#    Navigation    #
-# ---------------- #
-navs:
-  -
-    href: /
-    label: 首页
-
-  -
-    href: /categories/
-    label: 分类
-
-  -
-    href: /wiki/
-    label: 维基
-
-  -
-    href: /links/
-    label: 链接
-
-  -
-    href: /about/
-    label: 关于
-
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
-
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+safe: true
+lsi: false
 markdown: kramdown
+excerpt_separator: "\n\n"
+encoding: UTF-8
+ASSET_PATH: assets
+
 kramdown:
     input: GFM
-highlighter: rouge
-paginate: 8
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
-permalink: /:year/:month/:day/:title/
-gems:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-#     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+    auto_ids: true
+    footnote_nr: 1
+    entity_output: as_char
+    toc_levels: 1..6
+    syntax_highlighter: rouge
+    syntax_highlighter_opts:
+        default_lang: plaintext
 
-repository: asyncrun/asyncrun.github.io
+title : 胖梁的技术笔记
+author :
+    name : 胖梁
+    email : liang8305@gmail.com
+    github : https://github.com/pangliang
+    weibo : http://weibo.com/iamliangwei
 
-# ---------------- #
-#      Comments    #
-# ---------------- #
-# support provider: disqus, gitment, gitalk
-comments_provider: gitalk
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://disqus.com
-# disqus:
-#     username:
-# https://imsun.net/posts/gitment-introduction/
-# gitment:
-#     owner:
-#     repo:
-#     oauth:
-#         client_id:
-#         client_secret:
-# https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: asyncrun
-    repo: asyncrunBlog
-    clientID: b6f2f18742561881c437
-    clientSecret: ec7a2c5d0bbf0fd28c52f6517aa2e5be5d58b04c
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+image_dir: http://qiniucdn.zhaoxiaodan.com
+production_url : http://www.zhaoxiaodan.com
 
-# ---------------- #
-#    Analytics     #
-# ---------------- #
-google:
-    analytics_id:
 
-theme: jekyll-theme-merlot
+######## for 3-Jekyll themes
+# Sidebar filter
+# Choose 'tag' or 'category' as filter in sidebar.
+filter: 'category'
+
+sass:
+    style: compressed
+
+######## for 3-Jekyll  end themes
+
+disqus :
+    short_name : pangliang

@@ -1,0 +1,47 @@
+<aside id="sidebar">
+  <div id="sidebar-left">
+    <a id="sidebar-avatar" href="{{ "/" }}">
+      <img id="sidebar-avatar-img" alt="{{ site.tittle }}" src="http://cn.gravatar.com/avatar/ac952cea956802b7b690bb2e310adf16.jpg?size=200"/>
+    </a>
+
+    <div id="sidebar-social">
+      <a href="/atom.xml" target="_blank" class="sidebar-social-icon feed"></a>
+      {% include social.html %}
+    </div>
+
+    <ul id="sidebar-tags">
+      <li class="sidebar-tag active" data-filter="all">全部文章</li>
+      {% if site.filter == 'category' %}
+        {% assign categories_list = site.categories | sort %}
+        {% for category in categories_list %}
+          <li class="sidebar-tag" data-filter="{{ category | first }}">{{ category | first }}</li>
+        {% endfor %}
+      {% elsif site.filter == 'tag' %}
+        {% for tag in site.tags %}
+          <li class="sidebar-tag" data-filter="{{ tag | first }}">{{ tag | first }}</li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+
+  <div id="sidebar-right">
+    <div id="search-box">
+      <input id="search-input" type="text" placeholder="Search" />
+    </div>
+    <nav id="toc">
+      {% if site.filter == 'category' %}
+        {% for post in site.posts %}
+          <a class="toc-link" data-tags="{{ post.categories | join: ' ' }}" href="{{ post.url }}">
+            {% if post.slug %}{{ post.slug }}{% else %}{{ post.title }}{% endif %}
+          </a>
+        {% endfor %}
+      {% elsif site.filter == 'tag' %}
+        {% for post in site.posts %}
+          <a class="toc-link" data-tags="{{ post.tags | join: ' ' }}" href="{{ post.url }}">
+            {% if post.slug %}{{ post.slug }}{% else %}{{ post.title }}{% endif %}
+          </a>
+        {% endfor %}
+      {% endif %}
+    </nav>
+  </div>
+</aside>
