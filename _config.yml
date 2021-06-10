@@ -20,12 +20,12 @@ kramdown:
     syntax_highlighter_opts:
         default_lang: plaintext
 
-title : 胖梁的技术笔记
+title : 杭州老李
 author :
-    name : 胖梁
-    email : liang8305@gmail.com
-    github : https://github.com/pangliang
-    weibo : http://weibo.com/iamliangwei
+    name : 老李
+    email : asyncrun@gmail.com
+    github : https://github.com/asyncrun
+    weibo : http://weibo.com
 
 image_dir: http://qiniucdn.zhaoxiaodan.com
 production_url : http://www.zhaoxiaodan.com
@@ -42,4 +42,4 @@ sass:
 ######## for 3-Jekyll  end themes
 
 disqus :
-    short_name : pangliang
+    short_name : 老李

@@ -1,12 +1,9 @@
-#I'm Wei Liang
+#I'm Levi
 
 ## 我的技术博客
 
-<http://www.zhaoxiaodan.com/>
+<http://asyncrun.tech/>
 
-## 微博
-
-<http://weibo.com/iamliangwei>
 
 ## License
 
