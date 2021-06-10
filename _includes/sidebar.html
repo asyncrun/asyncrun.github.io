@@ -1,7 +1,7 @@
 <aside id="sidebar">
   <div id="sidebar-left">
     <a id="sidebar-avatar" href="{{ "/" }}">
-      <img id="sidebar-avatar-img" alt="{{ site.tittle }}" src="http://cn.gravatar.com/avatar/ac952cea956802b7b690bb2e310adf16.jpg?size=200"/>
+      <img id="sidebar-avatar-img" alt="{{ site.tittle }}" src="https://avatars.githubusercontent.com/u/27915992?v=4"/>
     </a>
 
     <div id="sidebar-social">
@@ -10,7 +10,7 @@
     </div>
 
     <ul id="sidebar-tags">
-      <li class="sidebar-tag active" data-filter="all">全部文章</li>
+      <li class="sidebar-tag active" data-filter="all">全部笔记</li>
       {% if site.filter == 'category' %}
         {% assign categories_list = site.categories | sort %}
         {% for category in categories_list %}
